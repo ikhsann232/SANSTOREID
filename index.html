@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SANNSTOREID</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+<body>
+
+   <canvas id="interactive-bg"></canvas>
+  
+  <div id="preloader">
+  <img src="https://i.ibb.co/cS6MqBDc/letter-s-logo-icon-design-template-elements-9999-65444.jpg" alt="Loading..." />
+</div>
+
+  <canvas id="starfield"></canvas>
+
+  <!-- Toggle Dark Mode -->
+  <div class="dark-mode-toggle">
+    <label class="switch">
+      <input type="checkbox" id="darkToggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <!-- KONTEN UTAMA -->
+  <div class="container" data-aos="fade-up">
+    <img class="profile-img" src="https://i.ibb.co/cS6MqBDc/letter-s-logo-icon-design-template-elements-9999-65444.jpg" alt="Foto Profil SANNSTOREID" />
+    <h1>SANNSTOREID</h1>
+    <p class="tagline"><span class="typing" id="typingText"></span></p>
+
+    <div class="social-icons">
+      <a href="https://instagram.com/thereall.sann" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/6282120370582" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fas fa-gamepad"></i></a>
+    </div>
+
+    <div class="links" id="linkContainer">
+      <a href="https://wa.me/6282120370582" class="button">📞 WA JOKI RANK MLBB</a>
+      <a href="https://itsugamarket.com" class="button">💎 TEMPAT TOP UP DIAMOND ALL GAME</a>
+      <a href="https://instagram.com/malky.joki_" class="button">INSTAGRAM JOKI</a>
+      <a href="https://wa.me/6285176852597" class="button">JUAL AKUN DI SINI - FREE FIRE</a>
+      <a href="https://wa.me/6282120370582" class="button">JUAL AKUN DI SINI - MOBILE LEGEND</a>
+      <a href="https://wa.me/6285176852597" class="button">JUAL AKUN DI SINI - VALORANT</a>
+      <a href="https://itsugamarket.com" class="button">DM VIA LOGIN (STOK TERBATAS)</a>
+  <a href="https://wa.me/6285176852597" class="button admin"><img src="https://i.ibb.co/nqVmGxmk/df6613083ce078547ecf92e3fcbaabca.jpg" alt="Admin 1">
+    LIVE CHAT ADMIN 1 ( RADITYA )
+  </a>
+  <a href="https://wa.me/6282120370582" class="button admin">
+    <img src="https://i.ibb.co/WNpNRXLB/acc472093c79a6290b7efd085749647a.jpg" alt="Admin 2">
+    LIVE CHAT ADMIN 2 ( HASBI )
+  </a>
+      <a href="https://instagram.com/thereall.sann" class="button"> INSTAGRAM ADMIN 1</a>
+      <a href="https://instagram.com/fdhlrdtya" class="button"> INSTAGRAM ADMIN 2</a>
+    </div>
+
+    <p class="typewriter-text"></p>
+    
+<section class="order-form">
+  <h2>Formulir Order Joki Rank Mobile Lejend Via WhatsApp</h2>
+  <form id="waForm">
+    <input type="text" id="nama" placeholder="Nama Lengkap" required>
+
+    <input type="text" id="nomorUser" placeholder="Nomor WhatsApp Anda (08xxxx)" required>
+
+    <label for="rankAwal"></label>
+    <select id="rankAwal" required>
+      <option value="">-- Pilih Rank Awal --</option>
+      <option value="Epic">Epic</option>
+      <option value="Legend">Legend</option>
+      <option value="Mythic">Mythic</option>
+      <option value="Immortal">Immortal</option>
+    </select>
+
+    <label for="rankTujuan"></label>
+    <select id="rankTujuan" required>
+      <option value="">-- Pilih Rank Tujuan --</option>
+      <option value="Legend">Legend</option>
+      <option value="Mythic">Mythic</option>
+      <option value="Glory">Glory</option>
+      <option value="Immortal">Immortal</option>
+    </select>
+
+    <textarea id="catatan" placeholder="Catatan untuk penjoki (opsional)"></textarea>
+
+    <button type="submit">Kirim via WhatsApp</button>
+  </form>
+</section>
+
+<script>
+  document.getElementById("waForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nama = document.getElementById("nama").value;
+    const rankAwal = document.getElementById("rankAwal").value;
+    const rankTujuan = document.getElementById("rankTujuan").value;
+    const catatan = document.getElementById("catatan").value;
+
+    const pesan = `Halo, saya ingin order joki rank Mobile Legends:` +
+                  `Nama: ${nama}` +
+                  `Rank Awal: ${rankAwal}` +
+                  `Rank Tujuan: ${rankTujuan}` +
+                  `Catatan: ${catatan || '-'}`;
+
+    const nomorWA = "6282120370582";
+    const urlWA = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
+
+    window.open(urlWA, "_blank");
+  });
+</script>
+    
+     <section class="invoice-section" id="invoiceSection">
+  <h2>Transaksi Terakhir</h2>
+  <p>Berikut ini Terakhir data pesanan masuk terbaru SANNSTOREID.</p>
+
+  <table class="invoice-table">
+    <thead>
+      <tr>
+        <th>Tanggal</th>
+        <th>Nomor Invoice</th>
+        <th>No. Handphone</th>
+        <th>Harga</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="invoiceBody">
+      <!-- 15 invoice pertama -->
+      <tr>
+  <td>23-07-2025 08:26:12</td>
+  <td>TPxxxxxxxxxxxx149</td>
+  <td>*********302</td>
+  <td>IDR 74.300</td>
+  <td><span class="status success">SUCCESS</span></td>
+</tr>
+<tr>
+  <td>23-07-2025 08:02:41</td>
+  <td>TPxxxxxxxxxxxx481</td>
+  <td>*********918</td>
+  <td>IDR 411.900</td>
+  <td><span class="status success">SUCCESS</span></td>
+</tr>
+<tr>
+  <td>23-07-2025 07:44:58</td>
+  <td>TPxxxxxxxxxxxx260</td>
+  <td>*********664</td>
+  <td>IDR 68.400</td>
+  <td><span class="status success">SUCCESS</span></td>
+</tr>
+<tr>
+  <td>23-07-2025 07:21:39</td>
+  <td>TPxxxxxxxxxxxx934</td>
+  <td>*********576</td>
+  <td>IDR 102.750</td>
+  <td><span class="status success">SUCCESS</span></td>
+</tr>
+<tr>
+  <td>23-07-2025 06:58:04</td>
+  <td>TPxxxxxxxxxxxx587</td>
+  <td>*********839</td>
+  <td>IDR 46.225</td>
+  <td><span class="status success">SUCCESS</span></td>
+</tr>
+<tr>
+  <td>23-07-2025 06:40:16</td>
+  <td>TPxxxxxxxxxxxx831</td>
+  <td>*********411</td>
+  <td>IDR 291.700</td>
+  <td><span class="status success">SUCCESS</span></td>
+</tr>
+<tr>
+  <td>23-07-2025 06:17:02</td>
+  <td>TPxxxxxxxxxxxx704</td>
+  <td>*********205</td>
+  <td>IDR 67.854</td>
+  <td><span class="status success">SUCCESS</span></td>
+</tr>
+<tr>
+  <td>23-07-2025 06:00:55</td>
+  <td>TPxxxxxxxxxxxx399</td>
+  <td>*********723</td>
+  <td>IDR 412.100</td>
+  <td><span class="status success">SUCCESS</span></td>
+</tr>
+    <tr>
+  <td>23-07-2025 05:47:33</td>
+  <td>TPxxxxxxxxxxxx128</td>
+  <td>*********514</td>
+  <td>IDR 59.200</td>
+  <td><span class="status success">SUCCESS</span></td>
+</tr>
+<tr>
+  <td>23-07-2025 05:29:48</td>
+  <td>TPxxxxxxxxxxxx273</td>
+  <td>*********366</td>
+  <td>IDR 86.390</td>
+  <td><span class="status success">SUCCESS</span></td>
+</tr>
+<tr>
+  <td>23-07-2025 05:14:26</td>
+  <td>TPxxxxxxxxxxxx351</td>
+  <td>*********982</td>
+  <td>IDR 197.820</td>
+  <td><span class="status success">SUCCESS</span></td>
+</tr>
+<tr>
+  <td>23-07-2025 04:59:12</td>
+  <td>TPxxxxxxxxxxxx627</td>
+  <td>*********447</td>
+  <td>IDR 55.000</td>
+  <td><span class="status success">SUCCESS</span></td>
+</tr>
+<tr>
+  <td>23-07-2025 04:50:35</td>
+  <td>TPxxxxxxxxxxxx732</td>
+  <td>*********133</td>
+  <td>IDR 88.943</td>
+  <td><span class="status success">SUCCESS</span></td>
+</tr>
+<tr>
+  <td>23-07-2025 04:42:20</td>
+  <td>TPxxxxxxxxxxxx886</td>
+  <td>*********790</td>
+  <td>IDR 234.000</td>
+  <td><span class="status success">SUCCESS</span></td>
+</tr>
+<tr>
+  <td>23-07-2025 04:37:44</td>
+  <td>TPxxxxxxxxxxxx501</td>
+  <td>*********670</td>
+  <td>IDR 63.888</td>
+  <td><span class="status success">SUCCESS</span></td>
+</tr>
+  </tbody>
+  </table>
+
+  <section class="order-checker" style="margin: 40px auto; text-align: center;">
+  <h2>Cek Status Order Kamu</h2>
+  <input type="text" id="orderSearch" placeholder="Masukkan Nomor Invoice / No HP" style="padding: 10px; width: 300px; border-radius: 8px;" />
+  <button onclick="checkOrder()" style="padding: 10px 20px; margin-left: 10px; border-radius: 8px; background-color: #00b894; color: white;">Cari</button>
+  <div id="orderResult" style="margin-top: 20px; color: white;"></div>
+</section>
+
+    <section class="leaderboard-section">
+  <h4 class="leaderboard-title">SANNSTOREID HALL OF FAME 💎</h4>
+  <h2 class="leaderboard-heading">Top 5 Sultan Pembelian Terbesar</h2>
+  <p class="leaderboard-subtext">
+    Peringkat pelanggan dengan pembelian tertinggi. Update otomatis setiap hari — siapa yang jadi sultan hari ini?
+  </p>
+
+  <!-- Harian -->
+  <div class="leaderboard-card">
+    <div class="leaderboard-tab">🔥 Pemborong Harian</div>
+    <ul class="leaderboard-list">
+      <li>1. Kevin Maulana 🥇 <span>Rp 489.000</span></li>
+      <li>2. Dewi Rahmawati 🥈 <span>Rp 452.500</span></li>
+      <li>3. Aldy Saputra 🥉 <span>Rp 429.800</span></li>
+      <li>4. Galuh Prasetya <span>Rp 415.300</span></li>
+      <li>5. Intan Maharani <span>Rp 398.000</span></li>
+    </ul>
+  </div>
+
+  <!-- Mingguan -->
+  <div class="leaderboard-card">
+    <div class="leaderboard-tab">🚀 Raja Mingguan</div>
+    <ul class="leaderboard-list">
+      <li>1. Bella Anggraini 🥇 <span>Rp 799.000</span></li>
+      <li>2. Rendi Saputro 🥈 <span>Rp 766.500</span></li>
+      <li>3. Yulia Herlina 🥉 <span>Rp 742.200</span></li>
+      <li>4. Zaki Ramadhan <span>Rp 721.900</span></li>
+      <li>5. Arum Lestari <span>Rp 690.000</span></li>
+    </ul>
+  </div>
+
+  <!-- Bulanan (Tetap) -->
+  <div class="leaderboard-card">
+    <div class="leaderboard-tab">👑 Top 5 - Bulan Ini</div>
+    <ul class="leaderboard-list">
+      <li>1. Alvin Prakoso 🥇 <span>Rp 2.000.000</span></li>
+      <li>2. Nisa Maharani 🥈 <span>Rp 1.862.500</span></li>
+      <li>3. Farhan Aziz 🥉 <span>Rp 1.732.800</span></li>
+      <li>4. Fajar Rendy <span>Rp 1.610.200</span></li>
+      <li>5. Rizka Amelia <span>Rp 1.523.000</span></li>
+    </ul>
+  </div>
+</section>
+    
+<link rel="stylesheet" href="leaderboard.css" />
+
+  
+    <div class="stats-box" data-aos="fade-up">
+  <h3>📊 Statistik Toko Kami</h3>
+  <ul>
+    <li>🔥 Total Order Hari Ini: <span id="orderToday" data-target="244">0</span></li>
+<li>🔥 Total Order Minggu Ini: <span id="activeCustomers" data-target="937">0</span></li>
+    <li>🚀 Pelanggan Aktif Bulan Ini: <span id="ordertoday" data-target="4826"</li>
+<li>⭐ Rating Layanan: <span id="rating" data-target="4.9" data-decimal="true">0</span></li>
+  </ul>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <div class="stats-container">
+  <!-- Baris Pertama -->
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+      <p class="stat-title">Jumlah Orderan (ALL)</p>
+      <p class="stat-value">16.257</p>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon"><i class="fa-solid fa-money-bill-wave"></i></div>
+      <p class="stat-title">Total Pemasukan</p>
+      <p class="stat-value">Rp 9.256.642</p>
+    </div>
+  </div>
+
+  <!-- Baris Kedua -->
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+      <p class="stat-title">Saldo Kotor</p>
+      <p class="stat-value">Rp 9.256.642</p>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+      <p class="stat-title">Saldo Bersih</p>
+      <p class="stat-value">Rp 8.793.809</p>
+    </div>
+  </div>
+</div>
+    
+  <!-- SCRIPT -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Dark mode toggle
+    document.getElementById('darkToggle').addEventListener('change', function () {
+      document.body.classList.toggle('dark-mode', this.checked);
+    });
+
+    // Typing effect
+    const text = "TOPUP | JOKI | JB AKUN ALL GAME";
+    let index = 0;
+    function typeEffect() {
+      if (index < text.length) {
+        document.getElementById("typingText").textContent += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 80);
+      }
+    }
+    window.onload = typeEffect;
+  </script>
+
+   <a href="https://wa.me/6282120370582" class="chat-float" title="Live Chat Admin">
+  <img src="https://i.ibb.co/Y7XFZbN6/user-headset-removebg-preview.png" alt="Chat Admin">
+</a>
+
+  <script>
+  const canvas = document.getElementById("starfield");
+  const ctx = canvas.getContext("2d");
+
+  let stars = [];
+  const numStars = 150;
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  function createStars() {
+    stars = [];
+    for (let i = 0; i < numStars; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 1.5,
+        speed: Math.random() * 0.5 + 0.1,
+      });
+    }
+  }
+
+  function drawStars() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "white";
+    for (let star of stars) {
+      ctx.beginPath();
+      ctx.arc(star.x, star.y, star.radius, 0, 2 * Math.PI);
+      ctx.fill();
+    }
+  }
+
+  function moveStars() {
+    for (let star of stars) {
+      star.y += star.speed;
+      if (star.y > canvas.height) {
+        star.y = 0;
+        star.x = Math.random() * canvas.width;
+      }
+    }
+  }
+
+  function animate() {
+    drawStars();
+    moveStars();
+    requestAnimationFrame(animate);
+  }
+
+  window.addEventListener("resize", () => {
+    resizeCanvas();
+    createStars();
+  });
+
+  resizeCanvas();
+  createStars();
+  animate();
+</script>
+
+  <script>
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("preloader");
+    setTimeout(() => {
+      loader.style.opacity = "0";
+      loader.style.visibility = "hidden";
+    }, 2500); // Bisa di ubah durasinya
+  });
+</script>
+
+  <script>
+  const userLang = navigator.language || navigator.userLanguage;
+  const textID = "Selamat datang di SANNSTOREID!";
+  const textEN = "Welcome to SANNSTOREID!";
+  const text = userLang.startsWith("en") ? textEN : textID;
+
+  window.addEventListener("load", () => {
+    const header = document.querySelector("h1");
+    if (header) header.textContent = text;
+  });
+</script>
+
+  <script>
+  function animateCountUp(element, target, isDecimal = false) {
+    let start = 0;
+    const duration = 2000; // durasi animasi (ms)
+    const startTime = performance.now();
+
+    function update(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const currentValue = isDecimal
+        ? (progress * target).toFixed(1)
+        : Math.floor(progress * target);
+      element.textContent = currentValue;
+
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      }
+    }
+
+    requestAnimationFrame(update);
+  }
+
+  window.addEventListener("load", () => {
+    document.querySelectorAll(".stats-box span").forEach((el) => {
+      const target = parseFloat(el.getAttribute("data-target"));
+      const isDecimal = el.dataset.decimal === "true";
+      animateCountUp(el, target, isDecimal);
+    });
+  });
+</script>
+
+  <script>
+  const canvas = document.getElementById("interactive-bg");
+  const ctx = canvas.getContext("2d");
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const dots = Array.from({ length: 80 }, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 2 + 1,
+    dx: (Math.random() - 0.5) * 0.5,
+    dy: (Math.random() - 0.5) * 0.5
+  }));
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let dot of dots) {
+      ctx.beginPath();
+      ctx.arc(dot.x, dot.y, dot.r, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(0, 191, 255, 0.5)"; // biru langit transparan
+      ctx.fill();
+      dot.x += dot.dx;
+      dot.y += dot.dy;
+
+      // Bounce dari pinggir layar
+      if (dot.x < 0 || dot.x > canvas.width) dot.dx *= -1;
+      if (dot.y < 0 || dot.y > canvas.height) dot.dy *= -1;
+    }
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+
+  window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+</script>
+   <script>
+  const counters = document.querySelectorAll('.counter');
+
+  counters.forEach(counter => {
+    counter.innerText = '0';
+
+    const updateCounter = () => {
+      const target = +counter.getAttribute('data-target');
+      const current = +counter.innerText.replace(/\D/g, '');
+      const increment = target / 100;
+
+      if (current < target) {
+        counter.innerText = Math.ceil(current + increment).toLocaleString();
+        setTimeout(updateCounter, 20);
+      } else {
+        counter.innerText = target.toLocaleString();
+      }
+    }
+    updateCounter();
+  }
+</script>
+    <script>
+  function formatRupiah(angka) {
+    return angka.toLocaleString("id-ID");
+  }
+
+  function animateCounters() {
+    const counters = document.querySelectorAll(".counter");
+    counters.forEach(counter => {
+      const target = +counter.getAttribute("data-target");
+      const isRupiah = counter.nextElementSibling?.classList.contains("currency");
+      let current = 0;
+      const speed = target / 100; // bisa kamu atur kecepatan
+
+      const updateCounter = () => {
+        current += speed;
+        if (current < target) {
+          counter.textContent = isRupiah
+            ? formatRupiah(Math.floor(current))
+            : Math.floor(current);
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.textContent = isRupiah
+            ? formatRupiah(target)
+            : target;
+        }
+      };
+
+      updateCounter();
+    });
+  }
+
+  window.addEventListener("load", animateCounters);
+</script>
+       
+  <script>
+  document.getElementById("waForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nama = document.getElementById("nama").value;
+    const nomorUser = document.getElementById("nomorUser").value;
+    const rankAwal = document.getElementById("rankAwal").value;
+    const rankTujuan = document.getElementById("rankTujuan").value;
+    const catatan = document.getElementById("catatan").value || "-";
+
+    const pesan = `Halo Admin, saya ingin order joki ML:\n\n` +
+      `📛 Nama: ${nama}\n` +
+      `📱 No. WhatsApp: ${nomorUser}\n` +
+      `🎯 Rank Awal: ${rankAwal}\n` +
+      `🏆 Rank Tujuan: ${rankTujuan}\n` +
+      `📝 Catatan: ${catatan}`;
+
+    const nomorAdmin = "6282120370582"; // ganti dengan nomor WhatsApp kamu
+    const url = `https://wa.me/${nomorAdmin}?text=${encodeURIComponent(pesan)}`;
+
+    window.open(url, "_blank");
+  });
+</script>
+  </body>
+  </html>
+
